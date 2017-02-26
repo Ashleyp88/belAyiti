@@ -49,7 +49,7 @@
 			break;
 		case 'mur':
 			# code...
-			require('../pages/galery.php');
+			require('../pages/galerie.php');
 			break;
 		case 'contact':
 			# code...
@@ -83,7 +83,7 @@
 
 	//defini le template pour executer la page courrante
 	if(empty($usr->id))
-		require('../pages/default/default.php');
+		require('../pages/template/default.php');
 	else
-		require('../pages/default/default-membre.php');
+		require('../pages/template/default-membre.php');
 
