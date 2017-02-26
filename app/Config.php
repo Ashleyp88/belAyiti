@@ -22,7 +22,7 @@
 			{
 				
 				$this->settings = require dirname(__DIR__).'/config/config.php'; 
-				var_dump(dirname(__DIR__).'/config/config.php');
+				//var_dump(dirname(__DIR__).'/config/config.php');
 			}
 
 			

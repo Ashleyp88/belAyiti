@@ -11,9 +11,9 @@
 	$bd = \App\App::getInstance()->getDatabase();
 
 	//definition d'une instancce de la classe manager
-	$usM = new App\UserManager($bd);
+	//$usM = new App\UserManager($bd);
 
-	$user;
+	//$user;
 
 
 

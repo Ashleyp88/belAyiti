@@ -30,7 +30,7 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -43,73 +43,18 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.php?p=home">Acceuille</a></li>
-            <li><a href="index.php?p=produit">poster un produit</a></li>
-            <li><a href="index.php?p=stockage">liste des  produits</a></li>
-            <li><a class="visible" id="click">se connecter</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
+            <li><a href="index.php?p=home">Acceuil</a></li>
+            <li><a href="index.php?p=produit">Galerie</a></li>
+            <li><a href="index.php?p=stockage">Contactez-nous</a></li>
+            <!-- <li><a class="visible" id="click">se connecter</a></li> -->
+          </ul>          
         </div>
       </div>
     </nav>
 
+    <!-- ici on affichera notre variable -->
     <div class="container">
-
-      <!-- un div pour tout cacher a volonter-->
-      <div class="row">
-        <div class="col-lg-offset-8 col-lg-4 tab" style=" display:none;">
-                
-                <!--form pour se connecter si on a deja le compte-->
-                <form class="form-horizontal col-lg-12" action="index.php?p=checkup" method="post">
-                  <!--Formulaire pour assurer les inscription comme
-                    cela se droit wt en toute securiter
-                  -->
-                  <!--champ pour le pseudo--> 
-                  <div class="row">
-                    <div class="form-group">
-                      <div class="col-lg-12">             
-                        <input class="form-control" type="text" placeholder="Votre pseudo" name = "pseudo" required />                                    
-                      </div>
-                    </div>            
-                  </div>
-
-                
-                  <!--champ pour le mot de passe-->
-                  <div class="row">
-                    <div class="form-group">
-                      <div class="col-lg-12">
-                        <input class="form-control" type="password" placeholder="un mot de passe" name="password" required />               
-                      </div>
-                    </div>            
-                  </div>
-
-                  <!--un champ pour l'option se souvenir de moi -->
-                  <div class="row">
-                    <div class="form-group">
-                      <div class="checkbox col-lg-12">
-                      <label>
-                        <input type="checkbox"> se souvenir de moi...
-                      </label>
-                      </div>                      
-                    </div>                    
-                  </div>
-
-                  <!--champ pour le boutton envoyer-->
-                  <div class="row">
-                    <div class="form-group">
-                      <div class="col-lg-12">
-                        <button class="btn btn-default btn-md pull-right" type="submit">Envoyer..<span class="glyphicon glyphicon-ok-sign"></span></button>
-                      </div>
-                    </div>            
-                  </div>
-            </form>
-          
-        </div>        
-      </div>
-
-    <?= $content ?>
+      <?= $content ?>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
