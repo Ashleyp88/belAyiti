@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	//chargement de l'autoloader pour la gestion automatique des class
+	//chargement de l'autoloader pour la gestion automatique des classes
 
 	define('ROOT', dirname(__DIR__));
 	require ROOT.'/app/App.php';
@@ -20,24 +20,24 @@
 	/*
 	*
 	*la gestion de la variable $p
-	*pour gere plusieurs pages
+	*pour gerer plusieurs pages
 	*ainsi la gestion en php est
 	*100 plus pratique que jamais
 	*/
 
 	if(isset($_GET['p']))
 	{
-		//si notre variable est defini on la met dans une autre
+		//si notre variable est definie on la met dans une autre
 		$p = $_GET['p'];
 	}
 	else
 	{
-		//dans le cas contraire on initialise la page d'aceuille par defaut
+		//dans le cas contraire on initialise la page d'accueil par defaut
 		$p = 'home';
 	}
 
 
-	//ob_start pour executer la pages comme dans la variable
+	//ob_start pour executer la page comme dans la variable
 	ob_start();
 
 	//un switch pour tout controle dans notre index.php
@@ -46,6 +46,14 @@
 		case 'home':
 			# code...
 			require('../pages/home.php');
+			break;
+		case 'mur':
+			# code...
+			require('../pages/galery.php');
+			break;
+		case 'contact':
+			# code...
+			require('../pages/contact.php');
 			break;
 
 		case 'log':
@@ -57,23 +65,7 @@
 			# coode...
 			//require('..pages/logOut.php');
 			break;
-		case 'checkup':
-				# code...
-			require('../pages/validation.php');
-				break;
-		case 'membre':
-			# code...
-			//require('..pages/member.php');
-			break;
-		case 'produit':
-			# code...
-			require('../pages/saler.php');
-			break;
 
-		case 'stockage':
-			# code...
-			require('../pages/stock.php');
-			break;
 
 		case 'con':
 			require('../pages/connexion.php');
@@ -91,7 +83,7 @@
 
 	//defini le template pour executer la page courrante
 	if(empty($usr->id))
-		require('../pages/template/default.php');
+		require('../pages/default/default.php');
 	else
-		require('../pages/template/default-membre.php');
+		require('../pages/default/default-membre.php');
 

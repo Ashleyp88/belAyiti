@@ -1,18 +1,21 @@
-<?
+<?php
 	/*
-	*ce ficher contient les informations essentiel
-	*pour faire l configuration de la base de donner
-	*ainsi il est plus facil de faire des 
-	*modification dans les parametres de connection
-	*/
-	return array(
+	*ce ficher contient les informations essentielles
+	*pour faire la configuration de la base de donner
+	*ainsi il est plus facile de faire des 
+	*modifications dans les parametres de connection
 
-					"db_user"=>"",
+	
+*/
+/**
+ * Database configuration
+ */
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', 'password');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'belhayiti');
 
-					"db_pass"=>"",
-
-					"db_host"=>"localhost",
-
-					"db_name"=>""
-
-				);
+define('USER_CREATED_SUCCESSFULLY', 0);
+define('USER_CREATE_FAILED', 1);
+define('USER_ALREADY_EXISTED', 2);
+?>
