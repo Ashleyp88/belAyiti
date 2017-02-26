@@ -13,6 +13,6 @@
 
 					"db_host"=>"localhost",
 
-					"db_name"=>"jouer_pour_gagner"
+					"db_name"=>""
 
 				);

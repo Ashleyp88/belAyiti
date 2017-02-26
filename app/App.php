@@ -6,7 +6,7 @@
 		{
 
 			//une variable pour stocker une instance de App
-			public $title ="Le savais tu?";
+			public $title ="BelAyiti";
 
 			private static $_instance;
 

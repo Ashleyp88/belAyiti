@@ -36,7 +36,7 @@
 			if($this->pdo === null)
 			{
 
-				$pdo = new PDO('mysql:dbname=jouer_pour_gagner;host=localhost', 'root', '');
+				$pdo = new PDO('mysql:dbname=;host=localhost', 'root', '');
 				$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 				$this->pdo = $pdo;
 

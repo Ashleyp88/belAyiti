@@ -3,10 +3,10 @@
 	namespace App;
 
 	/*
-	*	la classe UserManager va nous permettre de
-	*	la gestion de tous les operations des persoonnes
+	*	la classe UserManager va nous permettre de faire
+	*	la gestion de tous les operations des personnes
 	*	qui sont sont deja inscris et d'autre qui en voudrons bien faire 
-	*	partie de notre communauter
+	*	partie de notre commu...
 	*/
 	/**
 	* 
@@ -29,17 +29,6 @@
 		public function add(User $usr)
 		{
 
-			$req = $this->_db->prepare('INSERT INTO tempUser (	pseudo, 
-																password, 
-																mail, 
-																phone, 
-																date_inscription)
-														VALUE(  :pseudo,
-																:password,
-																:mail,
-																:telephone,NOW())',$usr->getSettings());
-
-			$usr->setId($this->_db->lastId());
 
 		}
 
