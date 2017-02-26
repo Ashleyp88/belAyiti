@@ -1,0 +1,60 @@
+body
+{
+
+	margin-top: 80px;
+	height: 800px;
+
+}
+.container
+{
+
+	margin-top: 100px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+.contenu,.slide,.tab
+{
+
+	border: solid black 1px;
+	text-align: center;
+
+}
+
+
+.contenu
+{
+
+	height: 400px;
+	position:absolute;
+		
+
+}
+
+.tab
+{
+
+	height: 185px;
+	width: 269px;
+	padding-top: 5px;
+	position:fixed;
+	background: -moz-linear-gradient(top, #ebe9f9 38%, #c1bfea 81%, #d8d0ef 95%); /* FF3.6-15 */
+
+}
+
+/***********/
+.btn-danger:hover
+{
+
+	color: white;
+	background-color: blue;
+}
+
+/***********/
+.btn-default:hover
+{
+
+	color: white;
+	background-color: blue;
+}
