@@ -57,7 +57,8 @@
         <div class="row" >
             <img src="assets/img/rose.jpeg" alt="Image d'accueil" class="img-responsive img1">
         </div>
-        <span class="glyphicon glyphicon-triangle-bottom" id="Fleche"></span>
+        <span class=" col-md-6 col-md-offset-3
+        text-center glyphicon glyphicon-triangle-bottom Fleche"></span>
 
     </header>
 

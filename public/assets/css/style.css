@@ -1,11 +1,16 @@
 .img1
 {
-    height: 500px;
+    height: 400px;
     width: 100%;
     line-height: 0.7;
+    margin-bottom: 0px;
 }
 
-#fleche
+.Fleche
 {
-    line-height: 0.7;
+    font-size : 65px;
+    color: orangered;
+    align: center;
+    margin-top: 0px;
+    line-height: 39px;
 }
