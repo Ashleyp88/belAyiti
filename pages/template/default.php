@@ -18,7 +18,7 @@
     <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="assets/bootstrap/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,27 +30,36 @@
 
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand">BelAyiti</a>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Bel AYITI</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.php?p=home">Acceuil</a></li>
+              <li><a href="index.php?p=produit">Galerie</a></li>
+              <li><a href="index.php?p=stockage">Contactez-nous</a></li>
+              <!-- <li><a class="visible" id="click">se connecter</a></li> -->
+                <li><a href="#">Connexion</a></li>
+            </ul>
+          </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.php?p=home">Acceuil</a></li>
-            <li><a href="index.php?p=produit">Galerie</a></li>
-            <li><a href="index.php?p=stockage">Contactez-nous</a></li>
-            <!-- <li><a class="visible" id="click">se connecter</a></li> -->
-          </ul>          
+      </nav>
+        <!-- ajout de l'image -->
+        <div class="row" >
+            <img src="assets/img/rose.jpeg" alt="Image d'accueil" class="img-responsive img1">
         </div>
-      </div>
-    </nav>
+        <span class="glyphicon glyphicon-triangle-bottom" id="Fleche"></span>
+
+    </header>
 
     <!-- ici on affichera notre variable -->
     <div class="container">
