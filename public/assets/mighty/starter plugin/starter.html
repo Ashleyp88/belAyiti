@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Starter Plugin / mightySlider &middot; Mighty Responsive Multipurpose Slider</title>
+
+		<!-- Behavioral Meta Data -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="mightySlider" />
+		<meta charset="utf-8" />
+
+		<!-- Core Meta Data -->
+		<meta name="author" content="Hemn Chawroka" />
+		<meta name="description" content="mightySlider is a jQuery plugin for creating advanced one-directional slider with item based navigation support." />
+		<meta name="keywords" content="jquery, slider, content slider, video slider, gallery, plugin, banner rotator, tabs, tabs slider, featured content slider" />
+
+		<!-- Apple Touch Icons -->
+		<link rel="apple-touch-icon" href="http://mightyslider.com/assets/icon/57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="http://mightyslider.com/assets/icon/72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="http://mightyslider.com/assets/icon/114.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="http://mightyslider.com/assets/icon/144.png" />
+
+		<!-- Open Graph Meta Data -->
+		<meta property="og:title" content="mightySlider - Mighty Responsive Multipurpose Slider" />
+		<meta property="og:url" content="http://mightyslider.com/" />
+		<meta property="og:image" content="http://mightyslider.com/assets/img/thumbnail.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="mightySlider is a jQuery plugin for creating advanced one-directional slider with item based navigation support." />
+
+		<!-- Twitter Card Meta Data -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:creator" content="@chawroka">
+		<meta name="twitter:url" content="http://mightyslider.com/" />
+		<meta name="twitter:title" content="mightySlider - Mighty Responsive Multipurpose Slider" />
+		<meta name="twitter:description" content="mightySlider is a jQuery plugin for creating advanced one-directional slider with item based navigation support." />
+		<meta name="twitter:image" content="http://mightyslider.com/assets/img/thumbnail.png" />
+
+		<!-- Humans -->
+		<link rel="author" href="humans.txt" />
+
+		<!-- Styles -->
+		<link href="http://mightyslider.com/assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://mightyslider.com/assets/css/docs.css" rel="stylesheet">
+		<link href="http://mightyslider.com/assets/css/style.css" rel="stylesheet">
+		<link href="http://mightyslider.com/assets/css/m-styles.min.css" rel="stylesheet">
+		<link href="http://mightyslider.com/assets/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../../src/css/mightyslider.css" rel="stylesheet">
+		<link href="mightyslider.starter-plugin.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="preloader">
+			<div id="status">
+				<div class="timer">Loading...</div>
+			</div>
+		</div>
+
+
+		<!--start navigation-->
+		<div class="navbar navbar-fixed-top navbar-default" id="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="./#intro" class="brand"><img src="http://mightyslider.com/assets/img/logo.png" width="149" height="41" alt="mightySlider"></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav pull-right">
+						<li><a href="./#intro">Home</a></li>
+						<li><a href="./#examples-top">Examples</a></li>
+						<li><a href="./#testimonial-top">Purchase</a></li>
+						<li><a href="./#affilates-top">Affiliates</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Support <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="http://mightyslider.com/documentation.html">Documentation</a></li>
+								<li><a href="http://goo.gl/REi0u2">Discussion</a></li>
+								<li><a href="http://mightyslider.com/faq.html">Frequently Asked Questions</a></li>
+								<li><a href="http://mightyslider.com/changelog.html">Changelog</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!--/.container -->
+		</div>
+
+
+		<style>
+			#example .mSCaption {
+				left: 20px;
+				bottom: 40px;
+				font-size: 18px;
+				line-height: normal;
+				font-weight: 300;
+				color: #000;
+				opacity: 0;
+				letter-spacing: -1px;
+				white-space: nowrap;
+				text-transform: uppercase;
+				z-index: 1002;
+
+				-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+			}
+			#example .mSCaption.showed {
+				bottom: 20px;
+				opacity: 1;
+			}
+		</style>
+
+		<div id="example" class="mightyslider_modern_skin black">
+			<div class="frame" data-mightyslider="width: 1585, height: 580">
+				<div class="slide_element">
+					<div class="slide prev_2" data-mightyslider="cover: 'http://mightyslider.com/assets/img/photos/MS-test-day-27898.jpg', thumbnail: 'http://mightyslider.com/assets/img/photos/MS-test-day-27898_thumb.jpg'"></div>
+					<div class="slide prev_1" data-mightyslider="cover: 'http://mightyslider.com/assets/img/photos/MS-test-day-27771.jpg', thumbnail: 'http://mightyslider.com/assets/img/photos/MS-test-day-27771_thumb.jpg'"></div>
+					<div class="slide active" data-mightyslider="cover: 'http://mightyslider.com/assets/img/photos/MS-test-day-27845.jpg', video: 'http://vimeo.com/32685545', thumbnail: 'http://mightyslider.com/assets/img/photos/MS-test-day-27845_thumb.jpg'">
+						<div class="mSCaption">
+							You can use direct video url<br>for full-sized videos &amp; covers
+						</div>
+					</div>
+					<div class="slide next_1" data-mightyslider="cover: 'http://mightyslider.com/assets/img/photos/MS-test-day-27780.jpg', thumbnail: 'http://mightyslider.com/assets/img/photos/MS-test-day-27780_thumb.jpg'"></div>
+					<div class="slide next_2" data-mightyslider="cover: 'http://mightyslider.com/assets/img/photos/MS-test-day-27749.jpg', thumbnail: 'http://mightyslider.com/assets/img/photos/MS-test-day-27749_thumb.jpg'"></div>
+					<div class="slide" data-mightyslider="cover: 'http://mightyslider.com/assets/img/photos/MS-test-day-278081.jpg', thumbnail: 'http://mightyslider.com/assets/img/photos/MS-test-day-278081_thumb.jpg'"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="featurette-divider2"></div>
+
+		<div class="container marketing">
+			<div class="featurette">
+				<div class="page-header">
+					<h2 class="slim">Starter Plugin</h2>
+				</div>
+				<p>This plugin shows one complete slide plus four partial of nearby slides at a same time which it increases the interest of seeing other slides by the visitors.</p>
+				<p>As usual you can simply use videos or images in any sizes or insert multiple animated layers over each slide, or add bullets, thumbnails or tabs.</p>
+				<p>Each slide takes a unique html value. It also can be used with auto playing feature.</p>
+				<p>The beautiful photos are by <b>MARCUS ERIKSSON</b> and you can see his website here:
+				<a target="_blank" href="http://marcuseriksson.net/">http://marcuseriksson.net/</a></p>
+			</div><!-- /.featurette -->
+		</div><!-- /.container -->
+
+		<div class="featurette-divider2"></div>
+
+		<div class="container marketing">
+			<div class="featurette">
+				<div class="clearfix">
+					<h2 class="slim pull-left">Usage</h2>
+				</div>
+				<div class="ms-tabs">
+					<ul class="nav-tabs clearfix">
+					  <li class="active"><a href="#js" data-toggle="tab">JavaScript</a></li>
+					  <li><a href="#html" data-toggle="tab">HTML</a></li>
+					  <li><a href="#css" data-toggle="tab">CSS</a></li>
+					  <li><a href="#full" data-toggle="tab">Full Page</a></li>
+					  <li><a href="#documentation" data-toggle="tab">Documentation</a></li>
+					</ul>
+					<div class="tab-content">
+					  <div class="tab-pane active in" id="js">
+						<div class="describe"><i class="icon-info-circle"></i>You need to put the following scripts just before the <code>&lt;⁄body></code></div>
+						<pre class="prettyprint theme-snappy-light">
+&lt;script type="text/javascript">
+    jQuery(document).ready(function($) {
+	    // Calling starter plugin via jQuery proxy
+        $('.frame').mSStarterPlugin({
+            startAt: 2
+        });
+    });
+&lt;/script>
+</pre>
+					  </div>
+					  <div class="tab-pane" id="html">
+						<div class="describe"><i class="icon-info-circle"></i>You need to put the following html markup in your html document where you want to have slider.</div>
+						<pre class="prettyprint theme-snappy-light">
+<a href="http://mightyslider.com/documentation.html#usage-markup" target="_blank" title="Get information about this on documentation">&lt;!-- PARENT --></a>
+&lt;div id="example" class="mightyslider_modern_skin black">
+    <a href="http://mightyslider.com/documentation.html#usage-markup" target="_blank" title="Get information about this on documentation">&lt;!-- FRAME --></a>
+    &lt;div class="frame" <a href="http://mightyslider.com/documentation.html#options-frame-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+        <a href="http://mightyslider.com/documentation.html#frame_options_width" target="_blank" title="Get information about this on documentation">width</a>: 1585,
+        <a href="http://mightyslider.com/documentation.html#frame_options_height" target="_blank" title="Get information about this on documentation">height</a>: 500
+    ">
+        <a href="http://mightyslider.com/documentation.html#usage-markup" target="_blank" title="Get information about this on documentation">&lt;!-- SLIDEELEMENT --></a>
+        &lt;div class="slide_element">
+            <a href="http://mightyslider.com/documentation.html#usage-markup" target="_blank" title="Get information about this on documentation">&lt;!-- SLIDES --></a>
+            &lt;div class="slide prev_2" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27898.jpg',
+                <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27898_thumb.jpg'
+            ">&lt;/div>
+            &lt;div class="slide prev_1" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27771.jpg',
+                <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'MS-test-day-27771_thumb.jpg'
+            ">&lt;/div>
+            &lt;div class="slide active" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27845.jpg',
+                <a href="http://mightyslider.com/documentation.html#slides-options-video" target="_blank" title="Get information about this on documentation">video</a>: 'http://vimeo.com/32685545',
+                <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'MS-test-day-27845_thumb.jpg'
+            ">
+                <a href="http://mightyslider.com/documentation.html#layers" target="_blank" title="Get information about this on documentation">&lt;!-- LAYER --></a>
+                &lt;div class="mSCaption">
+                    You can use direct video url&lt;br />for full-sized videos &amp; covers
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="slide next_1" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27780.jpg',
+                <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'MS-test-day-27780_thumb.jpg'
+            ">&lt;/div>
+            &lt;div class="slide next_2" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27749.jpg',
+                <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'MS-test-day-27749_thumb.jpg'
+            ">&lt;/div>
+            &lt;div class="slide" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-278081.jpg',
+                <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'MS-test-day-278081_thumb.jpg'
+            ">&lt;/div>
+            &lt;!-- END OF SLIDES -->
+        &lt;/div>
+        &lt;!-- END OF SLIDEELEMENT -->
+    &lt;/div>
+    &lt;!-- END OF FRAME -->
+&lt;/div>
+&lt;!-- END OF PARENT -->
+</pre>
+					  </div>
+					  <div class="tab-pane" id="css">
+						<div class="describe"><i class="icon-info-circle"></i>You need to put the following styles just before the <code>&lt;/head></code></div>
+						<pre class="prettyprint lang-css theme-snappy-light">
+&lt;style>
+    /*
+        Style the animated layer
+    */
+    #example .mSCaption {
+        left: 20px;
+        bottom: 40px;
+        font-size: 18px;
+        line-height: normal;
+        font-weight: 300;
+        color: #000;
+        opacity: 0;
+        letter-spacing: -1px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        z-index: 1002;
+
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    #example .mSCaption.showed {
+        bottom: 20px;
+        opacity: 1;
+    }
+&lt;/style>
+</pre>
+					  </div>
+					  <div class="tab-pane" id="full">
+						<pre class="prettyprint theme-snappy-light">&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;title>&lt;/title>
+
+    &lt;!-- mightySlider basic stylesheet with skins imported -->
+    &lt;link rel="stylesheet" type="text/css" href="mightyslider/src/css/mightyslider.css"/>
+    &lt;!-- Starter plugin stylesheet -->
+    &lt;link rel="stylesheet" type="text/css" href="mightyslider/src/css/mightyslider.starter-plugin.css"/>
+
+    &lt;style>
+        /*
+            Style the animated layer
+        */
+        #example .mSCaption {
+            left: 20px;
+            bottom: 40px;
+            font-size: 18px;
+            line-height: normal;
+            font-weight: 300;
+            color: #000;
+            opacity: 0;
+            letter-spacing: -1px;
+            white-space: nowrap;
+            text-transform: uppercase;
+            z-index: 1002;
+
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        #example .mSCaption.showed {
+            bottom: 20px;
+            opacity: 1;
+        }
+    &lt;/style>
+&lt;/head>
+&lt;body>
+
+    <a href="http://mightyslider.com/documentation.html#usage-markup" target="_blank" title="Get information about this on documentation">&lt;!-- PARENT --></a>
+    &lt;div id="example" class="mightyslider_modern_skin black">
+        <a href="http://mightyslider.com/documentation.html#usage-markup" target="_blank" title="Get information about this on documentation">&lt;!-- FRAME --></a>
+        &lt;div class="frame" <a href="http://mightyslider.com/documentation.html#options-frame-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+            <a href="http://mightyslider.com/documentation.html#frame_options_width" target="_blank" title="Get information about this on documentation">width</a>: 1585,
+            <a href="http://mightyslider.com/documentation.html#frame_options_height" target="_blank" title="Get information about this on documentation">height</a>: 500
+        ">
+            <a href="http://mightyslider.com/documentation.html#usage-markup" target="_blank" title="Get information about this on documentation">&lt;!-- SLIDEELEMENT --></a>
+            &lt;div class="slide_element">
+                <a href="http://mightyslider.com/documentation.html#usage-markup" target="_blank" title="Get information about this on documentation">&lt;!-- SLIDES --></a>
+                &lt;div class="slide prev_2" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                    <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27898.jpg',
+                    <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27898_thumb.jpg'
+                ">&lt;/div>
+                &lt;div class="slide prev_1" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                    <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27771.jpg',
+                    <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'MS-test-day-27771_thumb.jpg'
+                ">&lt;/div>
+                &lt;div class="slide active" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                    <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27845.jpg',
+                    <a href="http://mightyslider.com/documentation.html#slides-options-video" target="_blank" title="Get information about this on documentation">video</a>: 'http://vimeo.com/32685545',
+                    <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'MS-test-day-27845_thumb.jpg'
+                ">
+                    <a href="http://mightyslider.com/documentation.html#layers" target="_blank" title="Get information about this on documentation">&lt;!-- LAYER --></a>
+                    &lt;div class="mSCaption">
+                        You can use direct video url&lt;br />for full-sized videos &amp; covers
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="slide next_1" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                    <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27780.jpg',
+                    <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'MS-test-day-27780_thumb.jpg'
+                ">&lt;/div>
+                &lt;div class="slide next_2" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                    <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-27749.jpg',
+                    <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'MS-test-day-27749_thumb.jpg'
+                ">&lt;/div>
+                &lt;div class="slide" <a href="http://mightyslider.com/documentation.html#options-slides-options" target="_blank" title="Get information about this on documentation">data-mightyslider</a>="
+                    <a href="http://mightyslider.com/documentation.html#slides-options-cover" target="_blank" title="Get information about this on documentation">cover</a>: 'http://mightyslider.com/assets/img/photos/MS-test-day-278081.jpg',
+                    <a href="http://mightyslider.com/documentation.html#slides-options-thumbnail" target="_blank" title="Get information about this on documentation">thumbnail</a>: 'MS-test-day-278081_thumb.jpg'
+                ">&lt;/div>
+                &lt;!-- END OF SLIDES -->
+            &lt;/div>
+            &lt;!-- END OF SLIDEELEMENT -->
+        &lt;/div>
+        &lt;!-- END OF FRAME -->
+    &lt;/div>
+    &lt;!-- END OF PARENT -->
+
+    &lt;!-- mightySlider requires jQuery 1.7+  -->
+    &lt;!-- If you already have jQuery on your page, you shouldn't include it second time. -->
+    &lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">&lt;/script>
+    &lt;!-- Mobile touch events for jQuery -->
+    &lt;script type="text/javascript" src="http://mightyslider.com/assets/js/jquery.mobile.just-touch.js">&lt;/script>
+    &lt;!-- mightySlider layers animation engine -->
+    &lt;script type="text/javascript" src="mightyslider/src/js/tweenlite.js">&lt;/script>
+    &lt;!-- Main slider JS script file -->
+    &lt;script type="text/javascript" src="mightyslider/src/js/mightyslider.min.js">&lt;/script>
+
+    &lt;!-- Starter plugin JS script file -->
+    &lt;script type="text/javascript" src="mightyslider/src/js/mightyslider.starter-plugin.min.js">&lt;/script>
+
+    &lt;script type="text/javascript">
+        jQuery(document).ready(function($) {
+	        // Calling starter plugin via jQuery proxy
+            $('.frame').mSStarterPlugin({
+                startAt: 2
+            });
+        });
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</pre>
+					  </div>
+					  <div class="tab-pane" id="documentation">
+						<section class="bs-docs-section">
+							<div class="page-header">
+								<h1>Installation</h1>
+							</div>
+
+							<p>First make sure the <a href="http://dev.w3.org/html5/spec/syntax.html#the-doctype" target="_blank">HTML5 doctype</a> is set as the very first
+							line on the page:</p>
+							<pre class="prettyprint theme-snappy-light prettyprinted"><span class="dec">&lt;!DOCTYPE html&gt;</span></pre>
+
+							<p>Include <a href="http://www.jquery.com" target="_blank">jQuery</a> 1.7 or above in the header. Going with
+							the latest 1.10.x release is recommended for optimal
+							performance, the <a href="http://code.google.com/apis/ajaxlibs/documentation" target="_blank">Google CDN</a> can be used to include this
+							file.</p>
+
+							<p><a href="http://goo.gl/9X97NB">Download
+							<strong>mighty</strong>Slider</a> and upload the files from
+							the package to your server. Include
+							<code>mightyslider.min.js</code> and <code>mightyslider.starter-plugin.min.js</code> below jQuery. Also include
+							<code>mightyslider.css</code> and <code>mightyslider.starter-plugin.css</code> and make sure the include
+							paths point to the locations where the files have been
+							uploaded.</p>
+							<pre class="prettyprint theme-snappy-light">
+&lt;!-- Starter Plugin requires jQuery 1.7+ and mightySlider 2+  --&gt;
+&lt;!-- If you already have jQuery on your page, you shouldn't include it second time. --&gt;
+&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;!-- mightyslider JS script file --&gt;
+&lt;script type="text/javascript" src="mightyslider/src/js/mightyslider.min.js"&gt;&lt;/script&gt;
+&lt;!-- Starter Plugin JS script file --&gt;
+&lt;script type="text/javascript" src="mightyslider.starter-plugin.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- mightySlider basic stylesheet with skins imported --&gt;
+&lt;link rel="stylesheet" type="text/css" href="mightyslider/src/css/mightyslider.css"/&gt;
+&lt;!-- Starter Plugin basic stylesheet --&gt;
+&lt;link rel="stylesheet" type="text/css" href="mightyslider.starter-plugin.css"/&gt;
+</pre>
+
+							<p>That's it! <strong>Starter Plugin</strong> should now be
+							<a href="#usage" rel="scroll">ready for use</a>.</p>
+
+							<div class="bs-callout bs-callout-info">
+								<h4>Tip:</h4>
+								<p><a href="http://developer.yahoo.com/performance/rules.html#gzip" target="_blank">Gzipping</a> helps reduce the total
+								filesize to <strong>just 16kb</strong>.</p>
+							</div>
+						</section>
+						<section class="bs-docs-section">
+							<div class="page-header">
+								<h1 id="usage">Usage</h1>
+							</div>
+
+							<div class="page-header">
+								<h3>HTML</h3>
+							</div>
+							<p>You can use mightySlider <a href="http://mightyslider.com/http://mightyslider.com/documentation.html#usage" target="_blank">documentation</a> for HTML structure.</p>
+
+							<br />
+							<div class="page-header">
+								<h3>Calling via jQuery proxy</h3>
+							</div>
+							<pre class="prettyprint theme-snappy-light">
+jQuery( '#frame' ).mSStarterPlugin( [ options ] );
+</pre>
+							<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Arguments:</h4>
+							<ul class="functions clearfix">
+								<li>
+									<div class="key">
+										<code class="property">[ options ]</code>
+										<code class="type object">object</code>
+									</div>
+
+									<div class="explained">
+										<p>Object with plugin options. All options are documented below:</p>
+
+										<br />
+										<h4>Quick reference:</h4>
+										<p><strong>Starter Plugin</strong> call with all default options as defined in the source.</p>
+					<pre class="prettyprint theme-snappy-light lang-js">
+jQuery( '#frame' ).mSStarterPlugin({
+  // Options
+  speed:      1500,  // Animations speed in milliseconds. 0 to disable animations.
+  startAt:    0,     // Starting offset in slides.
+  arrows:     1,     // Enable navigation arrows.
+  timeBar:    1,     // Enable time loader bar.
+  slideSize:  '70%'  // Sets the slides size. Can be: Fixed(500) or Percent('100%') number.
+});
+</pre>
+
+										<ul class="functions clearfix">
+											<li>
+												<div class="key">
+													<code class="property">speed</code>
+													<code class="type number">number</code>
+													<span class="default">Default: <code>1500</code></span>
+												</div>
+
+												<div class="explained">
+													<p>Animations speed in milliseconds. <code>0</code> to disable animations.</p>
+													<hr />
+												</div>
+											</li>
+											<li>
+												<div class="key">
+													<code class="property">startAt</code>
+													<code class="type number">number</code>
+													<span class="default">Default: <code>0</code></span>
+												</div>
+
+												<div class="explained">
+													<p>Starting offset in slides.</p>
+													<pre class="prettyprint theme-snappy-light">
+startAt: 2
+</pre>
+													<hr />
+												</div>
+											</li>
+											<li>
+												<div class="key">
+													<code class="property">arrows</code>
+													<code class="type boolean">boolean</code>
+													<span class="default">Default: <code>true</code></span>
+												</div>
+
+												<div class="explained">
+													<p>Enable navigation arrows.</p>
+													<pre class="prettyprint theme-snappy-light">
+arrows: 0
+</pre>
+													<hr />
+												</div>
+											</li>
+											<li>
+												<div class="key">
+													<code class="property">timeBar</code>
+													<code class="type boolean">boolean</code>
+													<span class="default">Default: <code>true</code></span>
+												</div>
+
+												<div class="explained">
+													<p>Enable time loader bar.</p>
+													<pre class="prettyprint theme-snappy-light">
+timeBar: 0
+</pre>
+													<hr />
+												</div>
+											</li>
+											<li>
+												<div class="key">
+													<code class="property">slideSize</code>
+													<code class="type number">number</code>
+													<code class="type string">string</code>
+													<span class="default">Default: <code>'70%'</code></span>
+												</div>
+
+												<div class="explained">
+													<p>Sets the slides size. Can be: Fixed(500) or Percent('100%') number.</p>
+													<pre class="prettyprint theme-snappy-light">
+slideSize: '80%'
+</pre>
+													<pre class="prettyprint theme-snappy-light">
+slideSize: 300   // 300px
+</pre>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</section>
+					  </div>
+					</div>
+				  </div>
+			</div><!-- /.featurette -->
+		</div><!-- /.container -->
+
+		<div class="featurette-divider2"></div>
+		
+			<!-- /END THE FEATURETTES -->
+	<!--start footer-->
+		<section id="footer">
+			<div class="container">
+				<div class="row divide">
+	<!--logo and copyright-->
+					<div class="col-md-3">
+						<a href="./#intro" class="brand"><img src="http://mightyslider.com/assets/img/logo.png" width="149" height="41" alt=""></a>
+						<p>&copy;2014 iProDev.</p><br>
+						<p><strong>mighty</strong>Slider is product of <a href="http://www.iprodev.com" target="_blank">iProDev</a></p><br>
+					</div>
+	<!--footer menu-->
+					<div class="col-md-2 col-md-offset-4">
+						<ul>
+							<li><h5>Menu</h5></li>
+							<li><a href="./#intro">Home</a></li>
+							<li><a href="./#examples-top">Examples</a></li>
+							<li><a href="./#testimonial-top">Purchase</a></li>
+							<li><a href="./#affilates-top">Affiliates</a></li>
+						</ul>
+					</div>
+	<!--link to social networks-->
+					<div class="col-md-2 col-md-offset-1">
+						<ul>
+							<li><h5>Social</h5></li>
+							<li><a class="facebook" href="https://facebook.com/iprofessionaldev" target="_blank">Facebook</a></li>
+							<li><a class="twitter" href="http://www.twitter.com/chawroka" target="_blank">Twitter</a></li>
+							<li><a class="google" href="https://plus.google.com/+iprodev?rel=publisher" target="_blank">Google+</a></li>
+						</ul>
+					</div>	
+				</div>	
+			</div>
+		</section>
+
+
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="http://mightyslider.com/assets/js/jquery.js"></script>
+		<script src="http://mightyslider.com/assets/js/jquery.requestAnimationFrame.js"></script>
+		<script src="http://mightyslider.com/assets/js/jquery.mobile.just-touch.js"></script>
+		<script src="http://mightyslider.com/assets/js/jquery.migrate.min.js"></script>
+		<script src="http://mightyslider.com/assets/js/jquery.mousewheel.js" type="text/javascript"></script>
+		<script src="http://mightyslider.com/assets/js/jquery.scrollto-min.js"></script>
+		<script src="http://mightyslider.com/assets/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="http://mightyslider.com/assets/js/retina.js" type="text/javascript"></script>
+		<script src="http://mightyslider.com/assets/js/jquery.easing-1.3.pack.js" type="text/javascript"></script>
+		<script src="http://mightyslider.com/assets/js/jquery.simplr.smoothscroll.js" type="text/javascript"></script>
+		<script src="../../src/js/tweenlite.js" type="text/javascript"></script>
+		<script src="../../src/js/mightyslider.min.js" type="text/javascript"></script>
+		<script src="mightyslider.starter-plugin.min.js" type="text/javascript"></script>
+		<script src="http://mightyslider.com/assets/js/google-code-prettify/prettify.js"></script>
+		<script src="http://mightyslider.com/assets/js/google-code-prettify/lang-css.js"></script>
+		<script src="http://mightyslider.com/assets/js/custom.js" type="text/javascript"></script>
+		<script>
+			jQuery(document).ready(function($) {
+				$('.frame').mSStarterPlugin({
+					startAt: 2
+				});
+			});
+		</script>
+	</body>
+</html>

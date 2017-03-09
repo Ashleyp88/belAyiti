@@ -30,42 +30,66 @@
 
   <body>
 
-    <header>
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand">Bel AYITI</a>
+    <div class="container-fluid">
+      <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="index.php?p=home" class="navbar-brand">Bel AYITI</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.php?p=home">Acceuil</a></li>
+                <li><a href="index.php?p=mur">Galerie</a></li>
+                <li><a href="index.php?p=contact">Contactez-nous</a></li>
+                <!-- <li><a class="visible" id="click">se connecter</a></li> -->
+                <li>
+                  <a href="index.php?p=con"> <span class="glyphicon glyphicon-log-in"></span> Connexion</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.php?p=home">Acceuil</a></li>
-              <li><a href="index.php?p=produit">Galerie</a></li>
-              <li><a href="index.php?p=stockage">Contactez-nous</a></li>
-              <!-- <li><a class="visible" id="click">se connecter</a></li> -->
-                <li><a href="#">Connexion</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+        </nav>
+
         <!-- ajout de l'image -->
         <div class="row" >
-            <img src="assets/img/rose.jpeg" alt="Image d'accueil" class="img-responsive img1">
+          <img src="assets/img/chant.jpg" alt="Image d'accueil" class="img-responsive img1">
         </div>
-        <span class=" col-md-6 col-md-offset-3
-        text-center glyphicon glyphicon-triangle-bottom Fleche"></span>
+        <span class=" col-md-6 col-md-offset-3 text-center glyphicon glyphicon-triangle-bottom Fleche"></span>
 
-    </header>
+      </header>
 
-    <!-- ici on affichera notre variable -->
-    <div class="container">
-      <?= $content ?>
+      <!-- ici on affichera notre variable -->
+      <div class="container">
+        <?= $content ?>
+      </div>
+
     </div>
+
+    <footer class="basdepage modal-footer bottom ">
+        <div class="row">
+            <div class="container">
+                <div class="col-xs-6">
+                    <p>Ce site web a ete code avec beaucoup d'amour par le groupe <a href="index.php?p=contact">Thinkers</a></p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="basPage">Suivez nous sur : </p>
+                    <ul class="icon-bar basPage">
+                        <li class="glyphicon glyphicon-camera"></li>
+                        <li class="glyphicon glyphicon-camera"></li>
+                        <li class="glyphicon glyphicon-camera"></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster 

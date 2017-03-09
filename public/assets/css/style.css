@@ -14,3 +14,13 @@
     margin-top: 0px;
     line-height: 39px;
 }
+.basPage
+{
+    display: inline-block;
+}
+.basdepage
+{
+    background-color: orangered;
+    color: white;
+    
+}
