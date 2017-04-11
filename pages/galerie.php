@@ -16,6 +16,7 @@
 		<div class="row">
 			<div class="container">
 				<p><small>Photo prise le 02/12/95 a 3:00 am</small></p>
+				<i class="fa fa-thumbs-up" aria-hidden="true"></i>
 				<div class="col-md-2"><span class="glyphicon glyphicon-thumbs-up"> 4320</span></div>
 				<div class="col-md-2"><span class="glyphicon glyphicon-comment"></span></div>
 			</div>

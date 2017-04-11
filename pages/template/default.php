@@ -7,7 +7,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="assets/belha/belgo4.png">
+
+      <!-- basic stylesheet with skins imported -->
+      <link rel="stylesheet" type="text/css" href="assets/mighty/src/css/mightyslider.starter-plugin.css"/>
 
     <title><?php echo \App\app::getInstance()->title;?></title>
 
@@ -41,11 +44,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="index.php?p=home" class="navbar-brand">Bel AYITI</a>
+              <a href="index.php?p=home" class="navbar-brand">  Bel AYITI</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.php?p=home">Acceuil</a></li>
+                <li><a href="index.php?p=home">Accueil</a></li>
                 <li><a href="index.php?p=mur">Galerie</a></li>
                 <li><a href="index.php?p=contact">Contactez-nous</a></li>
                 <!-- <li><a class="visible" id="click">se connecter</a></li> -->
@@ -81,7 +84,12 @@
                 <div class="col-xs-6">
                     <p class="basPage">Suivez nous sur : </p>
                     <ul class="icon-bar basPage">
-                        <li class="glyphicon glyphicon-camera"></li>
+                        <li>
+                           <span class="fa-stack fa-lg">
+                               <i class="fa fa-circle fa-stack-2x"></i>
+                               <i class="fa fa-facebook fa-stack-1x"></i>
+                            </span>
+                        </li>
                         <li class="glyphicon glyphicon-camera"></li>
                         <li class="glyphicon glyphicon-camera"></li>
                     </ul>
@@ -95,14 +103,15 @@
     <!-- Placed at the end of the document so the pages load faster 
     <script src="essets/bootstrap/js/bootstrap.min.js"></script>-->
     <script>window.jQuery || document.write('<script src="assets/bootstrap/jquery.js"><\/script>')</script>
-
     <script src="../public/assets/bootstrap/js/jquery.js"></script>
-
     <script src = "assets/bootstrap/js/script.js"></script>
-   
-    
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->   
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+
+  <!--slider insertion -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Main slider JS script file -->
+    <script type="text/javascript" src="mightyslider/src/js/mightyslider.starter-plugin.min.js"></script>
   </body>
 </html>
